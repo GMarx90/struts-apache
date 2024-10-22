@@ -3,7 +3,7 @@ package org.apache.struts.example.jasperreports.service;
 import java.io.File;
 import java.util.Optional;
 
-import jakarta.servlet.ServletContext;
+import javax.servlet.ServletContext;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.apache.struts</groupId>
@@ -41,12 +43,10 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <maven.javadoc.skip>true</maven.javadoc.skip>
-
-        <struts2.version>7.0.0-M9</struts2.version>
+        <struts2.version>6.3.0.2</struts2.version>
         <log4j2.version>2.23.1</log4j2.version>
         <jetty-plugin.version>11.0.18</jetty-plugin.version>
         <jackson.version>2.14.1</jackson.version>
@@ -78,78 +78,73 @@
 
     <modules>
         <module>action-chaining</module>
-        <module>annotations</module>
-        <module>basic-struts</module>
-        <module>bean-validation</module>
-        <module>blank</module>
-        <module>coding-actions</module>
-        <module>control-tags</module>
-        <module>crud</module>
-        <module>debugging-struts</module>
-        <module>dynamic-href</module>
-        <module>exception-handling</module>
-        <module>exclude-parameters</module>
-        <module>expression-cache</module>
-        <module>file-upload</module>
-        <module>form-processing</module>
-        <module>form-tags</module>
-        <module>form-validation</module>
-        <module>form-xml-validation</module>
-        <module>helloworld</module>
-        <module>http-session</module>
-        <module>interceptors</module>
-        <module>jfreechart</module>
-        <module>json</module>
-        <module>json-customize</module>
-        <module>mailreader2</module>
-        <module>message-resource</module>
-        <module>message-store</module>
-        <module>preparable-interface</module>
-        <module>quarkus</module>
-        <module>restful2actionmapper</module>
-        <module>rest-angular</module>
-        <module>shiro-basic</module>
-        <module>spring-struts</module>
-        <module>text-provider</module>
-        <module>tiles</module>
-        <module>themes</module>
-        <module>themes-override</module>
-        <module>type-conversion</module>
-        <module>unit-testing</module>
-        <module>unknown-handler</module>
-        <module>using-tags</module>
-        <module>validation-messages</module>
-        <module>wildcard-method-selection</module>
-        <module>wildcard-regex</module>
-        <module>jasperreports</module>
-  </modules>
+<!--        <module>annotations</module>-->
+<!--        <module>basic-struts</module>-->
+<!--        <module>bean-validation</module>-->
+<!--        <module>blank</module>-->
+<!--        <module>coding-actions</module>-->
+<!--        <module>control-tags</module>-->
+<!--        <module>crud</module>-->
+<!--        <module>debugging-struts</module>-->
+<!--        <module>dynamic-href</module>-->
+<!--        <module>exception-handling</module>-->
+<!--        <module>exclude-parameters</module>-->
+<!--        <module>expression-cache</module>-->
+<!--        <module>file-upload</module>-->
+<!--        <module>form-processing</module>-->
+<!--        <module>form-tags</module>-->
+<!--        <module>form-validation</module>-->
+<!--        <module>form-xml-validation</module>-->
+<!--        <module>helloworld</module>-->
+<!--        <module>http-session</module>-->
+<!--        <module>interceptors</module>-->
+<!--        <module>jfreechart</module>-->
+<!--        <module>json</module>-->
+<!--        <module>json-customize</module>-->
+<!--        <module>mailreader2</module>-->
+<!--        <module>message-resource</module>-->
+<!--        <module>message-store</module>-->
+<!--        <module>preparable-interface</module>-->
+<!--        <module>quarkus</module>-->
+<!--        <module>restful2actionmapper</module>-->
+<!--        <module>rest-angular</module>-->
+<!--        <module>shiro-basic</module>-->
+<!--        <module>spring-struts</module>-->
+<!--        <module>text-provider</module>-->
+<!--        <module>tiles</module>-->
+<!--        <module>themes</module>-->
+<!--        <module>themes-override</module>-->
+<!--        <module>type-conversion</module>-->
+<!--        <module>unit-testing</module>-->
+<!--        <module>unknown-handler</module>-->
+<!--        <module>using-tags</module>-->
+<!--        <module>validation-messages</module>-->
+<!--        <module>wildcard-method-selection</module>-->
+<!--        <module>wildcard-regex</module>-->
+<!--        <module>jasperreports</module>-->
+    </modules>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>jakarta.servlet</groupId>
-                <artifactId>jakarta.servlet-api</artifactId>
-                <version>6.0.0</version>
-                <scope>provided</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>jakarta.servlet.jsp</groupId>
-                <artifactId>jakarta.servlet.jsp-api</artifactId>
-                <version>3.1.0</version>
-                <scope>provided</scope>
-            </dependency>
-
+            <!-- Zależność do walidacji Jakarta -->
             <dependency>
                 <groupId>jakarta.validation</groupId>
                 <artifactId>jakarta.validation-api</artifactId>
                 <version>3.0.2</version>
             </dependency>
 
+            <!-- Hibernate Validator -->
             <dependency>
                 <groupId>org.hibernate.validator</groupId>
                 <artifactId>hibernate-validator</artifactId>
                 <version>${hibernate-validator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>4.0.1</version>
+                <scope>provided</scope>
             </dependency>
 
             <dependency>
@@ -187,16 +182,22 @@
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson-data-bind.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>com.fasterxml.jackson.dataformat</groupId>
                 <artifactId>jackson-dataformat-xml</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
 
+
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-core</artifactId>
@@ -205,18 +206,9 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
         </dependency>
-        <dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.servlet.jsp</groupId>
-            <artifactId>jakarta.servlet.jsp-api</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -250,7 +242,6 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-
     </build>
 
     <repositories>
@@ -281,5 +272,4 @@
             </snapshots>
         </repository>
     </repositories>
-
 </project>

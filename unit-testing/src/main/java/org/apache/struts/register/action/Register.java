@@ -2,7 +2,6 @@ package org.apache.struts.register.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts.register.model.Person;
-import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 /**
  * Acts as a controller to handle actions
@@ -34,7 +33,6 @@ public class Register extends ActionSupport {
 
     }
 
-    @StrutsParameter(depth = 1)
     public Person getPersonBean() {
         return personBean;
     }
